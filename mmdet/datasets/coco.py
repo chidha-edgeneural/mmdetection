@@ -46,7 +46,7 @@ class CocoDataset(CustomDataset):
         Returns:
             list[dict]: Annotation info from COCO api.
         """
-
+        self.CLASSES = [ category["name"] for category in json.loads( open(ann_file,'r').read() )['categories'] ]
         self.coco = COCO(ann_file)
         # The order of returned `cat_ids` will not
         # change with the order of the CLASSES
