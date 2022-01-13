@@ -7,6 +7,7 @@ import os.path as osp
 import tempfile
 import warnings
 from collections import OrderedDict
+import json
 
 import mmcv
 import numpy as np
